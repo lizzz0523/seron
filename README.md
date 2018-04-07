@@ -1,0 +1,1 @@
+# SERON - a new json format with a schema
