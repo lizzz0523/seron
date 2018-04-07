@@ -1,7 +1,7 @@
 {
   "name": "seron",
   "version": "0.1.0",
-  "description": "json format with a schema",
+  "description": "a new json format with a schema",
   "main": "index.js",
   "repository": {
     "type": "git",
