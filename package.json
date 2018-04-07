@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "json format with a schema",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lizzz0523/seron"
+  },
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc --watch"
