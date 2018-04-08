@@ -302,7 +302,7 @@ class Decode implements IDecode {
     private readUnsignedLong_(buffer: Buffer, schema: ISchema): number {
         const type = buffer.readUInt8(this.offset_)
 
-        assert(type === T_UNSIGNED_LONG)
+        assert(type === T_UNSIGNED_LONG, 'type error')
         this.offset_ += 1
 
         const data = buffer.readUIntBE(this.offset_, 8)
@@ -341,7 +341,7 @@ class Decode implements IDecode {
     private readInt_(buffer: Buffer, schema: ISchema): number {
         const type = buffer.readUInt8(this.offset_)
 
-        assert(type === T_INT)
+        assert(type === T_INT, 'type error')
         this.offset_ += 1
 
         const data = buffer.readInt32BE(this.offset_)
@@ -375,7 +375,7 @@ class Decode implements IDecode {
     private readBoolean_(buffer: Buffer, schema: ISchema): boolean {
         const type = buffer.readUInt8(this.offset_)
 
-        assert(type === T_BOOLEAN)
+        assert(type === T_BOOLEAN, 'type error')
         this.offset_ += 1
 
         const data = !!buffer.readUInt8(this.offset_)
