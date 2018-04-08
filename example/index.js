@@ -35,10 +35,16 @@ const schema = map({
     ])
 })
 
+console.time('seron')
 const encode = SJSON.encode(schema, data)
-console.log(Buffer.from(JSON.stringify(data)).length)
-console.log(encode.length)
-console.log(encode)
+console.timeEnd('seron')
+
+console.time('json')
+const json = Buffer.from(JSON.stringify(data))
+console.timeEnd('json')
+
+console.log('seron: ', encode.length)
+console.log('json: ', json.length)
 
 const decode = SJSON.decode(schema, encode)
 console.log(decode)
